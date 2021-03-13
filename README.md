@@ -5,6 +5,7 @@ HTML / CSS / VanillaJS
 21.03.10 ~ 21.03.13
 
 ## 주요기능
+![image](https://user-images.githubusercontent.com/63391225/111024415-0ace9f80-8422-11eb-9cc4-266d9f4d5e6f.png)
 
 ### 1. 마우스를 이용한 선그리기 (PAINT)
 

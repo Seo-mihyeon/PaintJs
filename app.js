@@ -4,6 +4,7 @@ const colors = document.getElementsByClassName("jsColor");
 const range = document.getElementById("jsRange");
 const mode = document.getElementById("jsMode");
 const saveBtn = document.getElementById("jsSave");
+const clear = document.getElementById("jsClear");
 
 const INITIAL_COLOR = "#2c2c2c";
 const CANVAS_SIZE = 700;
@@ -19,6 +20,7 @@ ctx.lineWidth = 2.5;
 
 let painting = false;
 let filling = false;
+let clearing = false;
 
 function startPainting() {
   painting = true;
@@ -82,6 +84,11 @@ function handleSaveClick() {
   link.click();
 }
 
+function handleClear() {
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
+}
+
 if (canvas) {
   canvas.addEventListener("mousemove", onMouseMove); // canvas 안에 마우스 움직임시 호출처리
   canvas.addEventListener("mousedown", startPainting); //canvas 안에서 마우스 클릭
@@ -105,4 +112,8 @@ if (mode) {
 
 if (saveBtn) {
   saveBtn.addEventListener("click", handleSaveClick);
+}
+
+if (clear) {
+  clear.addEventListener("click", handleClear);
 }
